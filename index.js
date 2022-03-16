@@ -6,8 +6,10 @@ const discordClient = new Discord.Client();
 const START_COMMAND = "!start"
 let isRunning = false;
 
-const versionID = "61ef4e83e2474a000616e171";
-const apiKey = "VF.DM.61fc8bc91da27f001cd4c523.NiMbViG7rfsWv1Ag";
+require('dotenv').config();
+
+const versionID = process.env.VERSION_ID;
+const apiKey = process.env.VF_API_KEY;
 
 
 discordClient.on('message', async (message) => {
@@ -64,4 +66,4 @@ discordClient.on('message', async (message) => {
 
 })
 
-discordClient.login("OTMzNzMwNzQ2MjE1MDU1NDAw.YelyhQ.yckA1uU0KY2HdZRw2OhIRpTVHjY")
+discordClient.login(process.env.BOT_TOKEN)
