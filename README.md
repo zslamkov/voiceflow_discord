@@ -48,7 +48,7 @@ For every new message sent in the channel, we will make sure that the author of 
         return;
 ```
 
-## Make API Call
+## Call Voiceflow
 Next, we will use a ternary operator to send a `launch` request if the text input is the `START_COMMAND`, otherwise we will pass the entire string into a `text` request.
 
 ```js
